@@ -26,7 +26,13 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          echo "Building with BASE_PATH=vibe-marketing"
+          npm run build
+          echo "Build complete. Checking dist folder:"
+          ls -la dist/
+          echo "Checking index.html:"
+          head -20 dist/index.html
         env:
           # Set base path for GitHub Pages (use repo name if deploying to /repo-name/)
           # For root domain (username.github.io), set BASE_PATH to empty string
@@ -37,5 +43,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          cname: # Leave empty for default GitHub Pages domain
+          keep_files: false
+          force_orphan: true
 
