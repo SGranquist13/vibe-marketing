@@ -39,7 +39,7 @@ function App() {
 
           <div className="header-actions">
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-            <a href="https://github.com/SGranquist13?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn-text">Repositories</a>
+            <a href="https://github.com/SGranquist13/votg" target="_blank" rel="noopener noreferrer" className="btn-text">Main Repo</a>
             <a href="https://github.com/SGranquist13/votg" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Get Started
             </a>
@@ -68,8 +68,8 @@ function App() {
             </p>
 
             <div className="hero-actions">
-              <a href="https://github.com/SGranquist13?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn-large btn-primary-large group">
-                View Repositories
+              <a href="https://github.com/SGranquist13/votg" target="_blank" rel="noopener noreferrer" className="btn-large btn-primary-large group">
+                View Main Repo
                 <ArrowRight size={18} className="arrow-icon" />
               </a>
               <a href="https://github.com/SGranquist13/votg" target="_blank" rel="noopener noreferrer" className="btn-large btn-secondary-large">
