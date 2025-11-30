@@ -36,7 +36,7 @@ jobs:
         env:
           # Set base path for GitHub Pages (use repo name if deploying to /repo-name/)
           # For root domain (username.github.io), set BASE_PATH to empty string
-          BASE_PATH: ${{ github.event.repository.name }}
+          BASE_PATH: vibe-marketing
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
