@@ -47,9 +47,12 @@ git push -u origin main
 1. Go to your repository on GitHub
 2. Click **Settings** (top menu)
 3. Scroll down to **Pages** in the left sidebar
-4. Under **Source**, select:
-   - **Source**: `GitHub Actions`
-5. The page will automatically deploy when you push to the `main` branch
+4. Under **Build and deployment**, select:
+   - **Source**: `Deploy from a branch`
+   - **Branch**: `gh-pages` (select from dropdown)
+   - **Folder**: `/ (root)`
+5. Click **Save**
+6. The workflow will automatically create the `gh-pages` branch on first run
 
 ## Step 4: Configure Base Path (If Needed)
 
@@ -58,7 +61,7 @@ git push -u origin main
 If you're using a custom domain or want the site at the root (`username.github.io`):
 
 1. Update `.github/workflows/deploy.yml`:
-   - Change `BASE_PATH: ${{ github.event.repository.name }}` to `BASE_PATH: ''`
+   - Change `BASE_PATH: vibe-marketing` to `BASE_PATH: ''`
 
 ### For Subdirectory Deployment
 
