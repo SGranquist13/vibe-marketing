@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Zap, Sparkles, Code2, ArrowRight, Github, Twitter, Smartphone, Lock, Bell, Cloud, Mic, FileCode, Rocket, Server } from 'lucide-react';
+import { Terminal, Zap, Sparkles, Code2, ArrowRight, Github, Twitter, Smartphone, Lock, Bell, Cloud, Mic, FileCode, Rocket, Server, Layers, Users, Globe, CheckCircle } from 'lucide-react';
 import ThemeToggle from './components/ThemeToggle';
 
 function App() {
@@ -64,7 +64,7 @@ function App() {
             </h1>
 
             <p className="hero-subtitle">
-              Monitor and control Claude Code & Codex from your mobile device. End-to-end encrypted, self-hosted, and open source. Gemini CLI and Cursor CLI integrations coming soon.
+              Monitor and control Claude Code from anywhere. Powered by Vibe AI Gateway integration, your app connects to any AI provider through a unified interface. End-to-end encrypted, self-hosted, and open source.
             </p>
 
             <div className="hero-actions">
@@ -206,6 +206,127 @@ function App() {
             />
           </section>
 
+          {/* How It Works Section */}
+          <section className="how-it-works-section">
+            <h2 className="section-title">How It Works</h2>
+            <p className="section-subtitle">
+              Seamless integration from your app to any AI provider
+            </p>
+
+            <div className="architecture-flow">
+              <div className="flow-step glass-card">
+                <div className="flow-number">1</div>
+                <div className="flow-icon">
+                  <Smartphone size={32} />
+                </div>
+                <h3 className="flow-title">Your App</h3>
+                <p className="flow-description">
+                  Start with Vibe-on-the-Go mobile or web interface
+                </p>
+              </div>
+
+              <div className="flow-arrow">
+                <ArrowRight size={24} />
+              </div>
+
+              <div className="flow-step glass-card">
+                <div className="flow-number">2</div>
+                <div className="flow-icon">
+                  <Terminal size={32} />
+                </div>
+                <h3 className="flow-title">Claude Code</h3>
+                <p className="flow-description">
+                  Connects to Claude Code agent for intelligent task execution
+                </p>
+              </div>
+
+              <div className="flow-arrow">
+                <ArrowRight size={24} />
+              </div>
+
+              <div className="flow-step glass-card">
+                <div className="flow-number">3</div>
+                <div className="flow-icon">
+                  <Layers size={32} />
+                </div>
+                <h3 className="flow-title">Vibe AI Gateway</h3>
+                <p className="flow-description">
+                  Routes requests through unified gateway integration
+                </p>
+              </div>
+
+              <div className="flow-arrow">
+                <ArrowRight size={24} />
+              </div>
+
+              <div className="flow-step glass-card">
+                <div className="flow-number">4</div>
+                <div className="flow-icon">
+                  <Globe size={32} />
+                </div>
+                <h3 className="flow-title">Any Provider</h3>
+                <p className="flow-description">
+                  Connect to OpenAI, Anthropic, Google, or any AI provider
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="use-cases-section">
+            <h2 className="section-title">Perfect For</h2>
+            <p className="section-subtitle">
+              Whether you're coding on the go or managing remote development
+            </p>
+
+            <div className="use-cases-grid">
+              <div className="use-case-card glass-card">
+                <div className="use-case-icon">
+                  <Smartphone size={28} />
+                </div>
+                <h3 className="use-case-title">Mobile Developers</h3>
+                <p className="use-case-description">
+                  Monitor and control your AI coding agents from your phone or tablet. Perfect for reviewing progress during commutes or away from your desk.
+                </p>
+                <ul className="use-case-features">
+                  <li><CheckCircle size={16} /> Real-time session monitoring</li>
+                  <li><CheckCircle size={16} /> Approve permissions on the go</li>
+                  <li><CheckCircle size={16} /> Voice commands for hands-free control</li>
+                </ul>
+              </div>
+
+              <div className="use-case-card glass-card">
+                <div className="use-case-icon">
+                  <Users size={28} />
+                </div>
+                <h3 className="use-case-title">Distributed Teams</h3>
+                <p className="use-case-description">
+                  Keep your team in sync with shared AI agent sessions. Monitor progress, collaborate on tasks, and maintain visibility across time zones.
+                </p>
+                <ul className="use-case-features">
+                  <li><CheckCircle size={16} /> Multi-device access</li>
+                  <li><CheckCircle size={16} /> Instant notifications</li>
+                  <li><CheckCircle size={16} /> End-to-end encryption</li>
+                </ul>
+              </div>
+
+              <div className="use-case-card glass-card">
+                <div className="use-case-icon">
+                  <Rocket size={28} />
+                </div>
+                <h3 className="use-case-title">Rapid Prototyping</h3>
+                <p className="use-case-description">
+                  Build and iterate quickly with AI assistance anywhere. Start tasks from your mobile device and seamlessly transition to your desktop when ready.
+                </p>
+                <ul className="use-case-features">
+                  <li><CheckCircle size={16} /> Quick task initiation</li>
+                  <li><CheckCircle size={16} /> Seamless device switching</li>
+                  <li><CheckCircle size={16} /> File browsing and editing</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           {/* Coming Soon Section */}
           <section id="coming-soon" className="coming-soon-section">
             <h2 className="section-title">Coming Soon</h2>
@@ -307,11 +428,11 @@ function App() {
               </div>
               <div className="coming-soon-card glass-card">
                 <div className="coming-soon-icon">
-                  <Code2 size={24} />
+                  <Zap size={24} />
                 </div>
-                <h3 className="coming-soon-title">More Agent Support</h3>
+                <h3 className="coming-soon-title">Vibe AI Gateway</h3>
                 <p className="coming-soon-description">
-                  Gemini CLI and Cursor CLI integrations are currently in development and will be available soon.
+                  Unified interface to any AI provider. Claude Code connects through the Vibe AI Gateway, giving you flexibility to use OpenAI, Anthropic, Google, or any other provider seamlessly.
                 </p>
               </div>
             </div>

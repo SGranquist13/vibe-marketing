@@ -1528,3 +1528,213 @@ button {
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+/* How It Works Section */
+.how-it-works-section {
+  margin-bottom: 128px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.architecture-flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .architecture-flow {
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 16px;
+  }
+}
+
+.flow-step {
+  padding: 32px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.flow-number {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .flow-number {
+  background: rgba(62, 60, 56, 0.08);
+  border-color: rgba(62, 60, 56, 0.15);
+}
+
+.flow-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  margin-top: 8px;
+}
+
+.flow-step:hover .flow-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .flow-icon {
+  background: rgba(62, 60, 56, 0.08);
+  border-color: rgba(62, 60, 56, 0.15);
+}
+
+[data-theme="light"] .flow-step:hover .flow-icon {
+  background: rgba(62, 60, 56, 0.12);
+  border-color: var(--accent-primary);
+}
+
+.flow-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.flow-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.flow-arrow {
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 1024px) {
+  .flow-arrow {
+    transform: rotate(0deg);
+  }
+}
+
+/* Use Cases Section */
+.use-cases-section {
+  margin-bottom: 128px;
+  text-align: center;
+}
+
+.use-cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .use-cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.use-case-card {
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.use-case-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.use-case-card:hover .use-case-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .use-case-icon {
+  background: rgba(62, 60, 56, 0.08);
+  border-color: rgba(62, 60, 56, 0.15);
+}
+
+[data-theme="light"] .use-case-card:hover .use-case-icon {
+  background: rgba(62, 60, 56, 0.12);
+  border-color: var(--accent-primary);
+}
+
+.use-case-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.use-case-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.use-case-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.use-case-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.use-case-features li svg {
+  flex-shrink: 0;
+  color: #22c55e;
+}
+
+[data-theme="light"] .use-case-features li svg {
+  color: #16a34a;
+}
