@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Zap, Sparkles, Code2, ArrowRight, Github, Twitter, Smartphone, Lock, Bell, Cloud, Mic, FileCode, Rocket, Server } from 'lucide-react';
+import { Terminal, Zap, Sparkles, Code2, ArrowRight, Github, Twitter, Smartphone, Lock, Bell, Cloud, Mic, FileCode, Rocket, Server, Network, Cpu, Brain } from 'lucide-react';
 import ThemeToggle from './components/ThemeToggle';
+import ClaudeLogoColor from './assets/claude-color.svg';
+import GeminiLogoColor from './assets/gemini-color.svg';
+import GithubCopilotLogo from './assets/githubcopilot.svg';
+import GrokLogo from './assets/grok.svg';
+import GroqLogo from './assets/groq.svg';
+import MetaLogoColor from './assets/meta-color.svg';
+import MistralLogoColor from './assets/mistral-color.svg';
+import OlamaLogo from './assets/ollama.svg';
+import OpenAILogo from './assets/openai.svg';
+import OpenRouterLogo from './assets/openrouter.svg';
+import QwenLogoColor from './assets/qwen-color.svg';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -64,7 +75,7 @@ function App() {
             </h1>
 
             <p className="hero-subtitle">
-              Monitor and control Claude Code & Codex from your mobile device. End-to-end encrypted, self-hosted, and open source. Gemini CLI and Cursor CLI integrations coming soon.
+              Control and monitor your AI Coding Agent on the go. Use Claude Code or any AI provider through Claude Code Router.
             </p>
 
             <div className="hero-actions">
@@ -79,6 +90,7 @@ function App() {
 
             {/* Hero Visual - Terminal, Mobile & Cloud */}
             <div className="hero-visual-container">
+              <div className="hero-visual-row">
               {/* Terminal Window */}
               <div className="terminal-window glass-card">
                 <div className="terminal-header">
@@ -94,16 +106,25 @@ function App() {
                   <div className="terminal-line">
                     <span className="prompt-arrow">➜</span>
                     <span className="prompt-path">~</span>
-                    <span className="cmd">vibe auth login</span>
+                    <span className="cmd">vibe</span>
                   </div>
-                  <div className="terminal-output">Authenticating... <span className="success">Success</span></div>
-                  <div className="terminal-line">
-                    <span className="prompt-arrow">➜</span>
-                    <span className="prompt-path">~</span>
-                    <span className="cmd">vibe claude</span>
-                  </div>
-                  <div className="terminal-output">Starting Claude Code session...</div>
-                  <div className="terminal-output">Connected to mobile app</div>
+                  <div className="terminal-output">📱 Session created: cmjem8sg8000eu5g84n44u6tr</div>
+                  <div className="terminal-output"></div>
+                  <div className="terminal-output">Check your mobile app - the session should appear shortly.</div>
+                  <div className="terminal-output"></div>
+                  <div className="terminal-output"><span className="success">✓ Claude Code Router: Enabled and running</span></div>
+                  <div className="terminal-output"></div>
+                  <div className="terminal-output">📝 Session: cmjem8sg8000eu5g84n44u6tr</div>
+                  <div className="terminal-output">Logs: C:\Users\steven\.vibe\logs\2025-12-20-12-12-42-pid-20384.log</div>
+                  <div className="terminal-output"></div>
+                  <div className="terminal-output"> - Claude Code v2.0.24</div>
+                  <div className="terminal-output"> - - Opus 4.1 · API Usage Billing</div>
+                  <div className="terminal-output"> - C:\Users\steven\Desktop\votg\cli</div>
+                  <div className="terminal-output"></div>
+                  <div className="terminal-output">────────────────────────────────────────</div>
+                  <div className="terminal-output">&gt; Try "how do I log an error?"</div>
+                  <div className="terminal-output">────────────────────────────────────────</div>
+                  <div className="terminal-output">  ? for shortcuts</div>
                 </div>
               </div>
 
@@ -134,30 +155,6 @@ function App() {
                   </div>
                 </div>
               </div>
-
-              {/* Cloud Session - Coming Soon */}
-              <div className="cloud-session-hero glass-card coming-soon-hero">
-                <div className="cloud-session-header">
-                  <div className="cloud-session-dots">
-                    <div className="cloud-dot-small"></div>
-                    <div className="cloud-dot-small"></div>
-                    <div className="cloud-dot-small"></div>
-                  </div>
-                  <span className="cloud-session-title">Vibe Cloud</span>
-                </div>
-                <div className="cloud-session-body">
-                  <div className="cloud-session-icon-wrapper">
-                    <Server size={24} />
-                  </div>
-                  <div className="cloud-session-lines">
-                    <div className="cloud-session-line"></div>
-                    <div className="cloud-session-line"></div>
-                    <div className="cloud-session-line"></div>
-                  </div>
-                  <div className="cloud-session-status">
-                    <span className="cloud-coming-soon-badge">Coming Soon</span>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
@@ -167,42 +164,37 @@ function App() {
             <FeatureCard
               icon={<Smartphone size={24} />}
               title="Mobile Access"
-              description="Monitor AI agents from anywhere on iOS, Android, or Web. Seamless session management across all your devices."
+              description="Control your agents from anywhere—iOS, Android, or Web."
             />
             <FeatureCard
               icon={<Zap size={24} />}
               title="Instant Device Switching"
-              description="Take control with one tap. Switch between local terminal and remote mobile control instantly."
+              description="Switch between terminal and mobile in one tap."
             />
             <FeatureCard
               icon={<Lock size={24} />}
               title="End-to-End Encryption"
-              description="Zero-knowledge architecture ensures your code stays private. The server cannot decrypt your data."
+              description="Your code stays private. Zero-knowledge architecture."
             />
             <FeatureCard
               icon={<Bell size={24} />}
               title="Push Notifications"
-              description="Get alerts when your agent needs input, requests permissions, or encounters errors. Never miss a beat."
+              description="Get alerts when your agent needs you."
             />
             <FeatureCard
               icon={<Cloud size={24} />}
               title="Self-Hosted Option"
-              description="Run your own server for complete control. Open source and fully customizable."
+              description="Run your own server. Open source and customizable."
             />
             <FeatureCard
               icon={<Mic size={24} />}
               title="Voice Assistant"
-              description="Talk to your AI in 15+ languages. Natural voice interaction for hands-free coding."
-            />
-            <FeatureCard
-              icon={<Github size={24} />}
-              title="GitHub Integration"
-              description="Connect your GitHub profile for enhanced context and seamless workflow integration."
+              description="Talk to your AI in 15+ languages."
             />
             <FeatureCard
               icon={<FileCode size={24} />}
               title="File Manager"
-              description="Browse and edit files with syntax highlighting. Full file system access from your mobile device."
+              description="Browse and edit files with syntax highlighting."
             />
           </section>
 
@@ -295,23 +287,66 @@ function App() {
               </div>
             </div>
 
-            <div className="coming-soon-grid">
-              <div className="coming-soon-card glass-card">
+            <div className="coming-soon-grid coming-soon-featured">
+              <div className="coming-soon-card glass-card featured-card">
                 <div className="coming-soon-icon">
-                  <Rocket size={24} />
+                  <Rocket size={32} />
                 </div>
                 <h3 className="coming-soon-title">Vibe Cloud</h3>
                 <p className="coming-soon-description">
-                  Run your AI agents in secure cloud sandboxes with Vibe Cloud integration. Isolated environments for safe code execution.
+                  Run your AI agents in secure, managed cloud environments. Vibe Cloud gives you the power of Claude Code with automatic scaling, persistent sessions, and zero infrastructure overhead.
                 </p>
-              </div>
-              <div className="coming-soon-card glass-card">
-                <div className="coming-soon-icon">
-                  <Code2 size={24} />
+                <div className="cloud-features">
+                  <div className="cloud-feature-item">
+                    <span className="feature-dot">•</span>
+                    <span>Serverless agent execution</span>
+                  </div>
+                  <div className="cloud-feature-item">
+                    <span className="feature-dot">•</span>
+                    <span>Persistent session management</span>
+                  </div>
+                  <div className="cloud-feature-item">
+                    <span className="feature-dot">•</span>
+                    <span>Auto-scaling & monitoring</span>
+                  </div>
+                  <div className="cloud-feature-item">
+                    <span className="feature-dot">•</span>
+                    <span>Enterprise-grade security</span>
+                  </div>
                 </div>
-                <h3 className="coming-soon-title">More Agent Support</h3>
-                <p className="coming-soon-description">
-                  Gemini CLI and Cursor CLI integrations are currently in development and will be available soon.
+              </div>
+            </div>
+          </section>
+
+          {/* Supported Providers Section */}
+          <section className="providers-section">
+            <div className="providers-content">
+              <h2 className="section-title">Supported Providers</h2>
+              <p className="section-subtitle">Connect to your favorite AI provider through Claude Code Router</p>
+
+              <div className="providers-grid">
+                <ProviderCard logo={ClaudeLogoColor} name="Claude" provider="Anthropic" native={true} />
+                <ProviderCard logo={GeminiLogoColor} name="Gemini" provider="Default CCR Support" native={false} />
+                <ProviderCard logo={OlamaLogo} name="Ollama" provider="Default CCR Support" native={false} />
+                <ProviderCard logo={OpenAILogo} name="OpenAI" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={MetaLogoColor} name="Meta" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={MistralLogoColor} name="Mistral" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={QwenLogoColor} name="Qwen" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={GroqLogo} name="Groq" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={GrokLogo} name="Grok" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={GithubCopilotLogo} name="GitHub Copilot" provider="Via OpenRouter" native={false} />
+                <ProviderCard logo={OpenRouterLogo} name="OpenRouter" provider="Via OpenRouter" native={false} />
+              </div>
+
+              <div className="providers-info">
+                <p className="providers-info-text">
+                  <strong>Claude:</strong> Native support with full feature parity.
+                </p>
+                <p className="providers-info-text">
+                  <strong>Gemini & Ollama:</strong> Built-in CCR support.
+                </p>
+                <p className="providers-info-text">
+                  <strong>Other Providers:</strong> Available via OpenRouter integration. Add your OpenRouter API key to access 100+ models from OpenAI, Meta, Mistral, Groq, and more.
                 </p>
               </div>
             </div>
@@ -328,6 +363,7 @@ function App() {
               <span className="logo-placeholder">REDIS</span>
               <span className="logo-placeholder">TYPESCRIPT</span>
               <span className="logo-placeholder">SOCKET.IO</span>
+              <span className="logo-placeholder">CCR</span>
             </div>
           </section>
 
@@ -346,6 +382,7 @@ function App() {
             <a href="https://github.com/SGranquist13/vibe-cli" target="_blank" rel="noopener noreferrer">CLI</a>
             <a href="https://github.com/SGranquist13/vibe-mobile" target="_blank" rel="noopener noreferrer">Mobile</a>
             <a href="https://github.com/SGranquist13/vibe-server" target="_blank" rel="noopener noreferrer">Server</a>
+            <a href="https://github.com/SGranquist13/vibe-gateway" target="_blank" rel="noopener noreferrer">Gateway</a>
           </div>
           <div className="footer-social">
             <a href="https://github.com/SGranquist13/votg" target="_blank" rel="noopener noreferrer"><Github size={20} /></a>
@@ -367,6 +404,19 @@ function FeatureCard({ icon, title, description }) {
       <p className="feature-description">
         {description}
       </p>
+    </div>
+  );
+}
+
+function ProviderCard({ logo, name, provider, native }) {
+  return (
+    <div className="glass-card provider-card">
+      <div className="provider-logo-wrapper">
+        <img src={logo} alt={name} className="provider-logo" />
+      </div>
+      <h3 className="provider-name">{name}</h3>
+      <p className="provider-label">{provider}</p>
+      {native && <div className="provider-badge native">Native Support</div>}
     </div>
   );
 }
